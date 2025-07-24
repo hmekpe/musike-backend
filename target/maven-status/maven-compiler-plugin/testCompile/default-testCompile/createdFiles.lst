@@ -1,0 +1,4 @@
+com\musike\controller\SongControllerTest.class
+com\musike\controller\AuthControllerTest.class
+com\musike\controller\UserControllerTest.class
+com\musike\MusikeBackendApplicationTests.class

@@ -32,7 +32,7 @@ public class UserControllerTest {
 
     @Test
     void registerUserReturnsUser() throws Exception {
-        User user = new User(null, "testuser2", "password2");
+        User user = new User("testuser2", "password2");
         mockMvc.perform(post("/users")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(user)))

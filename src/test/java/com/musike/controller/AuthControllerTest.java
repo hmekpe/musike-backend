@@ -26,20 +26,17 @@ public class AuthControllerTest {
     private ObjectMapper objectMapper;
 
     @Autowired
-    private AuthController authController;
-
-    @Autowired
     private UserService userService;
 
     @BeforeEach
     void setUp() {
         userService.getAllUsers().clear();
-        userService.addUser(new User(null, "testuser", "password"));
+        userService.addUser(new User("testuser", "password"));
     }
 
     @Test
     void loginWithValidCredentials() throws Exception {
-        User user = new User(null, "testuser", "password");
+        User user = new User("testuser", "password");
         mockMvc.perform(post("/login")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(user)))
@@ -50,7 +47,7 @@ public class AuthControllerTest {
 
     @Test
     void loginWithInvalidCredentials() throws Exception {
-        User user = new User(null, "wronguser", "wrongpass");
+        User user = new User("wronguser", "wrongpass");
         mockMvc.perform(post("/login")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(user)))

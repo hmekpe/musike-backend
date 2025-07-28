@@ -9,8 +9,6 @@ C:\Users\HP\Desktop\musike\musike-backend\src\main\java\com\musike\model\Song.ja
 C:\Users\HP\Desktop\musike\musike-backend\src\main\java\com\musike\model\User.java
 C:\Users\HP\Desktop\musike\musike-backend\src\main\java\com\musike\MusikeBackendApplication.java
 C:\Users\HP\Desktop\musike\musike-backend\src\main\java\com\musike\repository\UserRepository.java
-C:\Users\HP\Desktop\musike\musike-backend\src\main\java\com\musike\service\CustomOAuth2UserService.java
-C:\Users\HP\Desktop\musike\musike-backend\src\main\java\com\musike\service\OAuth2SuccessHandler.java
 C:\Users\HP\Desktop\musike\musike-backend\src\main\java\com\musike\service\UserMapper.java
 C:\Users\HP\Desktop\musike\musike-backend\src\main\java\com\musike\service\UserService.java
 C:\Users\HP\Desktop\musike\musike-backend\src\main\java\com\musike\util\JwtUtil.java

@@ -1,5 +1,5 @@
-/target/
-.idea/
+/src/main/resources/application.properties
+.idea
 .vscode/
 .env
 .env.local

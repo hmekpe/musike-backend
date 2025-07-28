@@ -79,3 +79,27 @@
 2025-07-28T05:55:35.899Z  INFO 27364 --- [http-nio-8080-exec-1] com.musike.service.UserService           : Credentials validation result: true
 2025-07-28T05:55:35.901Z  INFO 27364 --- [http-nio-8080-exec-1] com.musike.controller.AuthController     : Credentials validation result: true
 2025-07-28T05:55:35.965Z  INFO 27364 --- [http-nio-8080-exec-1] com.musike.controller.AuthController     : Login successful for email: test@123.com
+2025-07-28T06:06:47.713Z  INFO 27364 --- [http-nio-8080-exec-7] com.musike.controller.AuthController     : Login attempt for email: test@123.comt
+2025-07-28T06:06:47.714Z  INFO 27364 --- [http-nio-8080-exec-7] com.musike.service.UserService           : Validating credentials for email: test@123.comt
+2025-07-28T06:06:47.727Z  INFO 27364 --- [http-nio-8080-exec-7] com.musike.service.UserService           : Total users in database: 1
+2025-07-28T06:06:47.727Z  INFO 27364 --- [http-nio-8080-exec-7] com.musike.service.UserService           : Credentials validation result: false
+2025-07-28T06:06:47.729Z  INFO 27364 --- [http-nio-8080-exec-7] com.musike.controller.AuthController     : Credentials validation result: false
+2025-07-28T06:06:47.730Z  WARN 27364 --- [http-nio-8080-exec-7] com.musike.controller.AuthController     : Login failed: Invalid credentials for email: test@123.comt
+2025-07-28T06:06:56.716Z  INFO 27364 --- [http-nio-8080-exec-8] com.musike.controller.AuthController     : Login attempt for email: test@123.com
+2025-07-28T06:06:56.717Z  INFO 27364 --- [http-nio-8080-exec-8] com.musike.service.UserService           : Validating credentials for email: test@123.com
+2025-07-28T06:06:56.721Z  INFO 27364 --- [http-nio-8080-exec-8] com.musike.service.UserService           : Total users in database: 1
+2025-07-28T06:06:56.721Z  INFO 27364 --- [http-nio-8080-exec-8] com.musike.service.UserService           : Credentials validation result: true
+2025-07-28T06:06:56.721Z  INFO 27364 --- [http-nio-8080-exec-8] com.musike.controller.AuthController     : Credentials validation result: true
+2025-07-28T06:06:56.729Z  INFO 27364 --- [http-nio-8080-exec-8] com.musike.controller.AuthController     : Login successful for email: test@123.com
+2025-07-28T06:22:11.898Z  INFO 27364 --- [http-nio-8080-exec-2] com.musike.controller.AuthController     : Login attempt for email: test@123.com
+2025-07-28T06:22:11.898Z  INFO 27364 --- [http-nio-8080-exec-2] com.musike.service.UserService           : Validating credentials for email: test@123.com
+2025-07-28T06:22:11.907Z  INFO 27364 --- [http-nio-8080-exec-2] com.musike.service.UserService           : Total users in database: 1
+2025-07-28T06:22:11.907Z  INFO 27364 --- [http-nio-8080-exec-2] com.musike.service.UserService           : Credentials validation result: true
+2025-07-28T06:22:11.907Z  INFO 27364 --- [http-nio-8080-exec-2] com.musike.controller.AuthController     : Credentials validation result: true
+2025-07-28T06:22:11.913Z  INFO 27364 --- [http-nio-8080-exec-2] com.musike.controller.AuthController     : Login successful for email: test@123.com
+2025-07-28T06:30:02.578Z  INFO 27364 --- [http-nio-8080-exec-6] com.musike.controller.AuthController     : Login attempt for email: test@123.com
+2025-07-28T06:30:02.579Z  INFO 27364 --- [http-nio-8080-exec-6] com.musike.service.UserService           : Validating credentials for email: test@123.com
+2025-07-28T06:30:02.585Z  INFO 27364 --- [http-nio-8080-exec-6] com.musike.service.UserService           : Total users in database: 1
+2025-07-28T06:30:02.586Z  INFO 27364 --- [http-nio-8080-exec-6] com.musike.service.UserService           : Credentials validation result: true
+2025-07-28T06:30:02.586Z  INFO 27364 --- [http-nio-8080-exec-6] com.musike.controller.AuthController     : Credentials validation result: true
+2025-07-28T06:30:02.592Z  INFO 27364 --- [http-nio-8080-exec-6] com.musike.controller.AuthController     : Login successful for email: test@123.com

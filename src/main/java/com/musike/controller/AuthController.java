@@ -137,10 +137,32 @@ public class AuthController {
     }
 
     @PostMapping("/logout")
-    public Object logout() {
-        // In a stateless JWT setup, logout is typically handled client-side
-        // by removing the token from storage
-        return Map.of("message", "Logged out successfully");
+    public Object logout(@RequestHeader("Authorization") String authHeader) {
+        try {
+            if (authHeader != null && authHeader.startsWith("Bearer ")) {
+                String token = authHeader.substring(7);
+                
+                // Validate the token
+                if (jwtUtil.validateToken(token)) {
+                    String email = jwtUtil.extractEmail(token);
+                    logger.info("User logout successful: {}", email);
+                    
+                    // In a production environment, you might want to:
+                    // 1. Add the token to a blacklist
+                    // 2. Update user's last logout time
+                    // 3. Clear any active sessions
+                    
+                    return Map.of("message", "Logout successful");
+                } else {
+                    return Map.of("error", "Invalid token");
+                }
+            } else {
+                return Map.of("error", "Authorization header required");
+            }
+        } catch (Exception e) {
+            logger.error("Logout error: {}", e.getMessage(), e);
+            return Map.of("error", "An error occurred during logout: " + e.getMessage());
+        }
     }
 
     @GetMapping("/me")

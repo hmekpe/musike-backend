@@ -82,6 +82,20 @@ public class JwtUtil {
         }
     }
 
+    public boolean validateToken(String token) {
+        if (token == null || token.trim().isEmpty()) {
+            return false;
+        }
+        
+        try {
+            // Just check if the token is valid and not expired
+            return !isTokenExpired(token);
+        } catch (Exception e) {
+            logger.error("Error validating token: {}", e.getMessage());
+            return false;
+        }
+    }
+
     private boolean isTokenExpired(String token) {
         try {
             return getClaims(token).getExpiration().before(new Date());

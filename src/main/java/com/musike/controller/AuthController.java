@@ -144,7 +144,7 @@ public class AuthController {
                 
                 // Validate the token
                 if (jwtUtil.validateToken(token)) {
-                    String email = jwtUtil.extractEmail(token);
+                    String email = jwtUtil.extractUsername(token);
                     logger.info("User logout successful: {}", email);
                     
                     // In a production environment, you might want to:
